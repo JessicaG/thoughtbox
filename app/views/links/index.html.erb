@@ -1,1 +1,5 @@
 <h1>Hello put links here</h1>
+<% @current_user.links.each do |link| %>
+<%= link.title %>
+<%= link.url %>
+<% end %>
