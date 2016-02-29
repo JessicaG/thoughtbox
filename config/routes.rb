@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
   root to: 'links#index'
+  resources :links do 
+    member do 
+      get :flip_status
+    end
+  end
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'

@@ -1,0 +1,9 @@
+<h4>Add a link </h4>
+
+<%= form_for :link, url: root_path do |f| %>
+
+  Title: <%= f.text_field :title %>
+  URL: <%= f.text_field :url %>
+  <%= f.submit "Submit" %>
+
+<% end %>

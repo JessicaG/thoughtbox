@@ -1,5 +1,8 @@
-<h1>Hello put links here</h1>
+<h1>Box of Thoughts</h1>
+<%= render 'new_link' %>
+
 <% @current_user.links.each do |link| %>
-<%= link.title %>
-<%= link.url %>
+	<%= link.title %>
+	<%= link.url %>
+	<%= link_to(link.read_status_name, flip_status_link_path(link)) %>
 <% end %>

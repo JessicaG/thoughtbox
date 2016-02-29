@@ -5,4 +5,8 @@ class Link < ActiveRecord::Base
 	validates :title, presence: true
 	belongs_to :user
 
+	def read_status_name
+		read ? "Mark as Read" : "Mark as Unread"
+  end
+
 end
